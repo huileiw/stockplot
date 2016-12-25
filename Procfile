@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn stock_plot:app
