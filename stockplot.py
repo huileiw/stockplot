@@ -31,7 +31,7 @@ def make_figure(stock,df,features):
     plot=figure(width=1000,height=500,x_axis_type="datetime",responsive=True)
 
     for feature in features:
-        plot.line(df["Date"],df[str(feature)],color = rand_color(), legend = '%s %s' %(stock, str(feature)),alpha=0.5)
+        plot.line(df["Date"],df[str(feature)],color = rand_color(), legend = '%s %s' %(stock.upper(), str(feature)),alpha=0.5)
     
     plot.legend.label_text_font = 'times'
     plot.legend.label_text_font_style = 'italic'
