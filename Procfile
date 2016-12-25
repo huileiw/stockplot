@@ -1,1 +1,1 @@
-web: gunicorn BokehFlask:app
+web: gunicorn stockplot:app
