@@ -55,4 +55,4 @@ def hello():
     return render_template('graph.html',script=script, div=div,stock = stock.upper())
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=33507)
