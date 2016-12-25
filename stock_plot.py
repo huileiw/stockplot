@@ -5,7 +5,11 @@ from bokeh.plotting import figure,output_file,show
 from bokeh.embed import components
 
 # initialize the Flask application
-app = Flask(__name__)
+@failsafe
+def create_app():
+    from routes import app
+    app = Flask(__name__)
+    return app
 
 def get_data(ticker):
     api_url = 'https://www.quandl.com/api/v1/datasets/WIKI/%s.json' % ticker

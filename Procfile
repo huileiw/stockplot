@@ -1,1 +1,1 @@
-web gunicorn stock_plot:app
+web: gunicorn stock_plot:create_app\(\) -w 3 -b 0.0.0.0:$PORT -k gevent --max-requests 250
