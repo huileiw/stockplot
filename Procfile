@@ -1,1 +1,1 @@
-web: gunicorn book_bokeh:app
+web: gunicorn stockplot:app
